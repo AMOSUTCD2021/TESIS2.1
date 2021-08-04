@@ -118,8 +118,9 @@
             <div class="d-flex justify-content-center h-100">
                 <div class="card">
                     <div class="card-header">
-                        <h3>Bienvenido al sistema</h3>
-                        <h3>Ingrese sus Datos</h3>
+                        <br>
+                        <h3><center>Bienvenido al sistema</center></h3>
+                        <h3><center>Ingrese sus Credenciales</center></h3>
 
                     </div>
                     <div class="card-body">
@@ -128,20 +129,24 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                                 </div>
-                                
+
                                 <input type="text" class="form-control" name="txtusuario" placeholder="Usuario">
                                 <%--<input type="text" class="form-control" name="txtusuario" placeholder="Usuario">--%>
 
                             </div>
+                            <br>
                             <div class="input-group form-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-key"></i></span>
                                 </div>
                                 <input type="password" class="form-control" name="txtcontrasena" placeholder="Contraseña">
-                            </div>                            
+                            </div>    
+                            <br>
+
                             <div class="form-group">
-                                <input type="submit" name="accion" value="Ingresar" class="btn float-right login_btn">
+                                <center></center> <input type="submit" name="accion" value="Ingresar" class="btn float-right login_btn text-center">
                             </div>
+                            <br>
                         </form>
                     </div>                    
                 </div>

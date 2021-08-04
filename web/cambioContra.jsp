@@ -122,16 +122,18 @@
             --></style>
     </head>
     <body>
+        <br>
         <h1> 
-             Cambia tu contraseña  
+             Por favor, introduzca una nueva contraseña!!  
         </h1>
+        <br>
 
         <div class="container">
             <div class="d-flex justify-content-center h-100">
                 <div class="card">
                     <div class="card-header">
                         <h3>Bienvenido al sistema ${usuar}</h3>
-                        <h3>Ingrese su nueva contraseña</h3>
+                        <h3>Ingrese una nueva contraseña</h3>
 
                     </div>
                     <div class="card-body">
