@@ -128,7 +128,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                                 </div>
-                                
+
                                 <input type="text" class="form-control" name="txtusuario" placeholder="Usuario">
                                 <%--<input type="text" class="form-control" name="txtusuario" placeholder="Usuario">--%>
 
@@ -146,8 +146,8 @@
                     </div>                    
                 </div>
             </div>
-        </div>
-    </body>
+        </div>                  
+</body>
 </html>
 
 

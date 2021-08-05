@@ -18,7 +18,7 @@ public class ConectaBD {
     private static String bd= "TESIS";
     private static String usuario= "postgres";
     private static String passw= "12345";
-    private static String url= "jdbc:postgresql://localhost:5432/"+bd;
+    private static String url= "jdbc:postgresql://localhost:5433/"+bd;
     
     public static Connection abrir(){
         try {
