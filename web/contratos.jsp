@@ -162,7 +162,7 @@
         <h1>Contratos</h1>
         <nav class="navbar navbar-dark bg-clear"> 
 
-            <form action="referenciales.jsp" method="POST">
+            <form action="ventas.jsp" method="POST">
                 <button type="submit" enabled class="btn btn-lg btn-warning"value="Volver"><i class="fa fa-undo"></i>Volver</button>
             </form>
         </nav>

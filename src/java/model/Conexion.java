@@ -15,7 +15,7 @@ public class Conexion {
     public Connection getConnection(){
         try {
             Class.forName("org.postgresql.Driver");
-            con=DriverManager.getConnection("jdbc:postgresql://localhost:5432/TESIS","postgres","12345");
+            con=DriverManager.getConnection("jdbc:postgresql://localhost:5433/TESIS","postgres","12345");
             System.out.println("Driver conectado!!!");
         } catch (Exception e) {
             System.out.println("Error en la conexión :/");

@@ -55,7 +55,6 @@ public class Controlador extends HttpServlet {
                 if (r == 1) {
 
                     if (contra.equalsIgnoreCase("123")) {
-
                         request.getSession().setAttribute("usuar", usuar);
 
                         request.getRequestDispatcher("cambioContra.jsp").forward(request, response);
@@ -69,16 +68,15 @@ public class Controlador extends HttpServlet {
                     }
 
                 } else {
-
+                    request.getRequestDispatcher("error.jsp").forward(request, response);
                     contfallo = contfallo + 1;
                     Variables.contadorfallos = contfallo;
-                    
 
                     if (contfallo == 3) {
                         p.setNombre_usuario(usuar);
                         r = dao3.validar(p);
                     }
-                    
+
                     request.getRequestDispatcher("error.jsp").forward(request, response);
                 }
             }
@@ -119,10 +117,10 @@ public class Controlador extends HttpServlet {
                 }
 
             } else {
+
                 request.getRequestDispatcher("index.htm").forward(request, response);
             }
         }
-
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

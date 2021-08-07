@@ -189,7 +189,7 @@
                 <button type="submit" enabled class="btn btn-lg btn-success"value="departamento"><i class="fa fa-map"></i>Departemento</button>
             </form>
 
-            <form action="pais.jsp" method="POST">                
+            <form action="paisF.jsp" method="POST">                
             <!--    <input type="submit" target="_blank" class="btn btn-lg btn-success" value="Pais"> <span class="glyphicon glyphicon-globe"></span>      --> 
                 <button type="submit" enabled class="btn btn-lg btn-success"value="Pais"><i class="fa fa-globe"></i>Pais</button>
             </form>

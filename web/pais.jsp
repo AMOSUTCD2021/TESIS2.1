@@ -162,16 +162,35 @@
         <h1>Registro de países</h1>
 
         <nav class="navbar navbar-dark bg-clear"> 
-            
+
             <form action="referenciales.jsp" method="POST">
                 <button type="submit" enabled class="btn btn-lg btn-warning"value="Volver"><i class="fa fa-undo"></i>Volver</button>
             </form>
         </nav>
         <br>
 
-        <form class="form-horizontal">
-            <fieldset>
+        <div class="card-body">
+            <form action="pais">
+                <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    </div>
 
+                    <input type="text" class="form-control" name="textinputclave" placeholder="Usuario">
+
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" name="accion" value="Guardar" class="btn float-right login_btn">
+                    <div class="text-center">
+                        <!-- Button HTML (to Trigger Modal) -->
+                        <a href="#registrado.jsp" class="trigger-btn" data-toggle="modal"></a>
+                    </div>
+                </div>
+            </form>
+        </div>    
+        <form class="form-horizontal">            
+            <fieldset>
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="textinput">Descripción</label>  
                     <div class="col-md-4">
@@ -179,8 +198,6 @@
                         <span class="help-block">Ingrese nombre del país</span>  
                     </div>
                 </div>
-
-
                 <!-- Button -->
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="singlebutton">Nuevo</label>
@@ -201,10 +218,9 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="singlebutton">Guardar</label>
                     <div class="col-md-4">
-                        <button id="singlebutton" name="singlebutton" class="btn btn-primary"><i class="fa fa-save"></i></button>
+                        <button id="singlebutton" name="accion" value="Guardar" class="btn btn-primary"><i class="fa fa-save"></i></button>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="singlebutton">Buscar</label>
                     <div class="col-md-4">
