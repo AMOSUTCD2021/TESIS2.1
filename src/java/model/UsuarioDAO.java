@@ -32,7 +32,7 @@ public class UsuarioDAO implements Validar {
             while (rs.next()) {
                 r = r + 1;
                 
-               Variables.id = Integer.parseInt(rs.getString("id_usuario"));
+               //Variables.id = Integer.parseInt(rs.getString("id_usuario"));
                 
                 u.setNombre_usuario(rs.getString("nombre_usuario"));
                 u.setClave_usuario(rs.getString("clave_usuario"));

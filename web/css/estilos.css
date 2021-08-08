@@ -101,7 +101,7 @@
 
  .navbar .dropdown-menu .dropdown-item:focus, .header-blue .navbar .dropdown-menu .dropdown-item {
   line-height:2;
-  color:#37434d;
+  color:#37434d; 
 }
 
  .navbar .dropdown-menu .dropdown-item:focus, .header-blue .navbar .dropdown-menu .dropdown-item:hover {

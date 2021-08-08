@@ -83,7 +83,7 @@
                 <div class="man-icon"></div>
                 <h3 class="title">GENIAL</h3>
                 <p class="info">He guardado correctamente los datos</p>
-                <a button type="button" class="home-btn" href="paisF.jsp" >País</button></a> 
+                <a button type="button" class="home-btn" href="referenciales.jsp" >Volver</button></a> 
             </div>
         </div>
     </body>

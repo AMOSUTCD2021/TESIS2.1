@@ -11,36 +11,36 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.Pais;
-import model.PaisBD;
+import model.Barrio;
+import model.BarrioBD;
 
 /**
  *
  * @author Francisca Gómez
  */
-@WebServlet(name = "pais", urlPatterns = {"/pais"})
-public class pais extends HttpServlet {
-
-    Pais p = new Pais();
-    PaisBD pbd = new PaisBD();
+@WebServlet(name = "barrio", urlPatterns = {"/barrio"})
+public class barrio extends HttpServlet {
+    
+    Barrio b = new Barrio();
+    BarrioBD bbd = new BarrioBD();
     int r;
-
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String accion = request.getParameter("accion");
+         String accion = request.getParameter("accion");
         if (accion.equals("Guardar")) {
             String descrip = request.getParameter("descriptxt");
-            String estado = request.getParameter("customRadio");
+            String pais = request.getParameter("search");
             int length = descrip.length();
             if (length == 0) {
                 request.getRequestDispatcher("mensaje.jsp").forward(request, response);
             } else {
-                p.setDescripcion_pais(descrip);
-                p.setEstado_pais(estado);
-                r = pbd.registrarPais(p);
+                b.setDescripcion_barrio(descrip);
+                b.setId_paisd(pais);
+                r = bbd.registrarBarrio(b);
                 if (r == 0) {
-                    request.getRequestDispatcher("registradoReferenciales.jsp").forward(request, response);
+                    request.getRequestDispatcher("registrado.jsp").forward(request, response);
                 } else {
                     request.getRequestDispatcher("error.jsp").forward(request, response);
                 }

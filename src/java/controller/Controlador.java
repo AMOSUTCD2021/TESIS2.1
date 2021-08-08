@@ -36,11 +36,11 @@ public class Controlador extends HttpServlet {
         if (accion.equals("Ingresar")) {
 
             String usuar = request.getParameter("txtusuario");
-            String contra = request.getParameter("txtcontrasena");
+            String contra = String.valueOf(request.getParameter("txtcontrasena"));
             int length = usuar.length();
             int length2 = contra.length();
 
-            if (length == 0 || length2 == 0) {
+            if (length == 0 || length2 == 0 ) {
 
                 request.getRequestDispatcher("mensaje.jsp").forward(request, response);
                 //   request.getRequestDispatcher("index.htm").forward(request, response);
@@ -50,7 +50,7 @@ public class Controlador extends HttpServlet {
                 p.setNombre_usuario(usuar);
                 p.setClave_usuario(contra);
                 r = dao.validar(p);
-                contrasenha = Integer.parseInt(contra);
+             //   contrasenha = Integer.parseInt(contra);
 
                 if (r == 1) {
 

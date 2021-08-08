@@ -29,21 +29,39 @@
                         <h2>País</h2>
                         <p>Por favor, complete los campos</p>
                     </div>
-                    <<form action="pais" method="POST">
+                    <form action="pais" method="POST">
                         <div class="card-details">
                             <h3 class="title">Detalles del País</h3>
                             <div class="row">
                                 <%-- Campo para completar--%>
                                 <div class="form-group col-sm-7">
-                                    <label for="card-holder">Despcrición</label>
+                                    <label for="card-holder">Descripción</label>
                                     <input id="card-holder" type="text" name="descriptxt" class="form-control" placeholder="Ej: Paraguay" aria-label="Card Holder" aria-describedby="basic-addon1">
                                 </div>
+                                <%--BOTON CHEKBOX PARA ESTADO--%>
                                 <div class="form-group col-sm-7">
                                     <label for="card-holder">Estado</label>
-                                    <input  disabled id="card-holder" type="text" class="form-control" placeholder="Ej: Activo" aria-label="Card Holder" aria-describedby="basic-addon1">
+                                    <ul class="list-group">
+                                        <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                            <div class="custom-control custom-radio">
+                                                <input class="custom-control-input" id="customRadio1" type="radio" name="customRadio" value="activo">
+                                                <label class="custom-control-label" for="customRadio1">
+                                                    <p class="mb-0">Activo</p>
+                                                </label>
+                                            </div>
+                                            <label for="customRadio1"><img src="https://res.cloudinary.com/mhmd/image/upload/v1579682182/2_rqo4zs.gif" alt="" width="60"></label>
+                                        </li>
+                                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                                            <div class="custom-control custom-radio">
+                                                <input class="custom-control-input" id="customRadio2" type="radio" name="customRadio" value="inactivo">
+                                                <label class="custom-control-label" for="customRadio2">
+                                                    <p class="mb-0">Inactivo</p>
+                                                </label>
+                                            </div>
+                                            <label for="customRadio2"><img src="https://res.cloudinary.com/mhmd/image/upload/v1579682182/1_ezgo0i.png" alt="" width="60"></label>
+                                        </li>
+                                    </ul>
                                 </div>
-
-
                                 <%--Botones--%>
                                 <div>
                                     <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
@@ -75,6 +93,4 @@
     </body>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</body>
-
 </html>
