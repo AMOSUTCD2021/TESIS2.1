@@ -1,243 +1,249 @@
 <%-- 
-    Document   : pais.jsp
-    Created on : 07/06/2021, 03:50:31 PM
-    Author     : Alvaro
+    Document   : paisF
+    Created on : 05/08/2021, 01:48:50 PM
+    Author     : Francisca Gómez
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Registro de Países</title>
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-        <STYLE TYPE="text/css" MEDIA=screen>
-            <!-- 
-            html,body{
-                background-image: url('https://cdn.hipwallpaper.com/m/62/20/4rKTDz.jpg');
-                background-size: cover;
-                background-repeat: no-repeat;
-                height: 100%;
-                font-family: 'Numans', sans-serif;
-                color: white;
-
-                .custab{
-                    border: 1px solid #ccc;
-                    padding: 5px;
-                    margin: 5% 0;
-                    box-shadow: 3px 3px 2px #ccc;
-                    transition: 0.5s;
-                }
-                .custab:hover{
-                    box-shadow: 3px 3px 0px transparent;
-                    transition: 0.5s;
-                }
-            }
-
-            .margin{
-                margin-top:-3px;    
-                margin-bottom:0px;
-            }
-
-            .themeBtn {
-                background: #ff5c00;
-                color: #ffffff !important;
-                display: inline-block;
-                font-size: 15px;
-                font-weight: 500;
-                height: 30px;
-                line-height: 0.8;
-                padding: 10px 20px;
-                text-transform: capitalize;
-                border-radius: 1px;
-                letter-spacing: 0.5px;
-                border:0px !important;
-                cursor:pointer;
-                border-radius:100px;
-
-            }
-            a:hover{
-                color: #ffffff;
-                text-decoration:none;
-            }
-            .themeBtn:hover {
-                background: rgb(255, 92, 0);
-                color: #ffffff;
-                box-shadow: 0 10px 25px -2px rgba(255, 92, 0, 0.6);
-            }
-            .themeBtn2 {
-                background: #7600ff;
-                color: #ffffff !important;
-                display: inline-block;
-                font-size: 15px;
-                font-weight: 500;
-                height: 50px;
-                line-height: 0.8;
-                padding: 18px 30px;
-                text-transform: capitalize;
-                border-radius: 1px;
-                letter-spacing: 0.5px;
-                border:0px !important;
-                cursor:pointer;
-                border-radius:100px;
-
-            }
-            .themeBtn2:hover {
-                background: rgb(118, 0, 255);
-                color: #ffffff;
-                box-shadow: 0 10px 25px -2px rgba(118, 0, 255, 0.6);
-            }
-            .themeBtn3 {
-                background: #0f8515;
-                color: #ffffff !important;
-                display: inline-block;
-                font-size: 12px;
-                font-weight: 500;
-                height: 30px;
-                line-height: 0.8;
-                padding: 10px 20px;
-                text-transform: capitalize;
-                border-radius: 1px;
-                letter-spacing: 0.5px;
-                border:0px !important;
-                cursor:pointer;
-                border-radius:80px;
-
-            }
-            .themeBtn3:hover {
-                background: rgb(255, 46, 77);
-                color: #ffffff;
-                box-shadow: 0 10px 25px -2px rgba(255, 46, 77, 0.6);
-            }
-            .themeBtn4 {
-                background: #006eff;
-                color: #ffffff !important;
-                display: inline-block;
-                font-size: 15px;
-                font-weight: 500;
-                height: 30px;
-                line-height: 0.8;
-                padding: 10px 20px;
-                text-transform: fullwidth;
-                border-radius: 1px;
-                letter-spacing: 0.5px;
-                border:0px !important;
-                cursor:pointer;
-                border-radius:100px;
-
-            }
-            .themeBtn4:hover {
-                background: rgb(0, 110, 255);
-                color: #ffffff;
-                box-shadow: 0 10px 25px -2px rgba(0, 110, 255, 0.6);
-            }
-
-
-            .input-icons i {
-                position: absolute;
-            }
-
-            .input-icons {
-                width: 100%;
-                margin-bottom: 10px;
-            }
-
-            .icon {
-                padding: 10px;
-                min-width: 40px;
-            }
-
-
-
-            --></style>
-
+        <title>País</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="css/estiloformulario.css">
     </head>
+    <style>
+        .payment-form{
+            padding-bottom: 50px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .payment-form.dark{
+
+        }
+        .payment-form .content{
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+            background-color: white;
+        }
+
+        .payment-form .block-heading{
+            padding-top: 50px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .payment-form .block-heading p{
+            text-align: center;
+            max-width: 420px;
+            margin: auto;
+            opacity:0.7;
+        }
+
+        .payment-form.dark .block-heading p{
+            opacity:0.8;
+            color: #ffffff;
+        }
+
+        .payment-form .block-heading h1,
+        .payment-form .block-heading h2,
+        .payment-form .block-heading h3 {
+            margin-bottom:1.2rem;
+            color: #ffffff;
+        }
+
+        .payment-form form{
+            border-top: 2px solid #ffffff;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+            background-color: #e9e9e9;
+            padding: 0;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .payment-form .title{
+            font-size: 1em;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            margin-bottom: 0.8em;
+            font-weight: 600;
+            padding-bottom: 8px;
+        }
+
+        .payment-form .products{
+            background-color: #f7fbff;
+            padding: 25px;
+        }
+
+        .payment-form .products .item{
+            margin-bottom:1em;
+        }
+
+        .payment-form .products .item-name{
+            font-weight:600;
+            font-size: 0.9em;
+        }
+
+        .payment-form .products .item-description{
+            font-size:0.8em;
+            opacity:0.6;
+        }
+
+        .payment-form .products .item p{
+            margin-bottom:0.2em;
+        }
+
+        .payment-form .products .price{
+            float: right;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .payment-form .products .total{
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+            padding-top: 19px;
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        .payment-form .card-details{
+            padding: 25px 25px 15px;
+        }
+
+        .payment-form .card-details label{
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #722f37;
+            text-transform: uppercase;
+        }
+
+        .payment-form .card-details button{
+            margin-top: 0.6em;
+            padding:12px 0;
+            font-weight: 600;
+        }
+
+        .payment-form .date-separator{
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+
+        @media (min-width: 576px) {
+            .payment-form .title {
+                font-size: 1.2em; 
+            }
+
+            .payment-form .products {
+                padding: 40px; 
+            }
+
+            .payment-form .products .item-name {
+                font-size: 1em; 
+            }
+
+            .payment-form .products .price {
+                font-size: 1em; 
+            }
+
+            .payment-form .card-details {
+                padding: 40px 40px 30px; 
+            }
+
+            .payment-form .card-details button {
+                margin-top: 2em; 
+            } 
+        }
+        /*BOTON CHECKBOX*/
+        .text-small {
+            font-size: 0.9rem !important;
+        }
+
+        body {
+            background: linear-gradient(to left, #56ab2f, #a8e063);
+        }
+
+        .cursor-pointer {
+            cursor: pointer;
+        }
+        body {
+            background-color: #808080;
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%23722f37' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+    </style>
     <body>
-        <h1>Registro de países</h1>
-
-        <nav class="navbar navbar-dark bg-clear"> 
-
-            <form action="referenciales.jsp" method="POST">
-                <button type="submit" enabled class="btn btn-lg btn-warning"value="Volver"><i class="fa fa-undo"></i>Volver</button>
-            </form>
-        </nav>
-        <br>
-
-        <div class="card-body">
-            <form action="pais">
-                <div class="input-group form-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+        <main class="page payment-page">
+            <section class="payment-form dark">
+                <div class="container">
+                    <div class="block-heading">
+                        <h2>País</h2>
+                        <p>Por favor, complete los campos</p>
                     </div>
+                    <form action="pais" method="POST">
+                        <div class="card-details">
+                            <h3 class="title">Detalles del País</h3>
+                            <div class="row">
+                                <%-- Campo para completar--%>
+                                <div class="form-group col-sm-7">
+                                    <label for="card-holder">Descripción</label>
+                                    <input id="card-holder" type="text" name="descriptxt" class="form-control" placeholder="Ej: Paraguay" aria-label="Card Holder" aria-describedby="basic-addon1">
+                                </div>
+                                <%--BOTON CHEKBOX PARA ESTADO--%>
+                                <div class="form-group col-sm-7">
+                                    <label for="card-holder">Estado</label>
+                                    <ul class="list-group">
+                                        <li class="list-group-item rounded-0 d-flex align-items-center justify-content-between">
+                                            <div class="custom-control custom-radio">
+                                                <input class="custom-control-input" id="customRadio1" type="radio" name="customRadio" value="activo">
+                                                <label class="custom-control-label" for="customRadio1">
+                                                    <p class="mb-0">Activo</p>
+                                                </label>
+                                            </div>
+                                            <label for="customRadio1"><img src="https://res.cloudinary.com/mhmd/image/upload/v1579682182/2_rqo4zs.gif" alt="" width="60"></label>
+                                        </li>
+                                        <li class="list-group-item d-flex align-items-center justify-content-between">
+                                            <div class="custom-control custom-radio">
+                                                <input class="custom-control-input" id="customRadio2" type="radio" name="customRadio" value="inactivo">
+                                                <label class="custom-control-label" for="customRadio2">
+                                                    <p class="mb-0">Inactivo</p>
+                                                </label>
+                                            </div>
+                                            <label for="customRadio2"><img src="https://res.cloudinary.com/mhmd/image/upload/v1579682182/1_ezgo0i.png" alt="" width="60"></label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <%--Botones--%>
+                                <div>
+                                    <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+                                        <ul class="nav navbar-nav">
 
-                    <input type="text" class="form-control" name="textinputclave" placeholder="Usuario">
+                                            <li class="dropdown">
+                                                <input type="submit" name="accion" target="_blank" class="btn btn-light action-button" value="Guardar">
+                                            </li>
 
-                </div>
+                                            <li class="dropdown">
+                                                <input type="submit" name="accion" target="_blank" class="btn btn-light action-button" value="Modificar">
+                                            </li>
 
-                <div class="form-group">
-                    <input type="submit" name="accion" value="Guardar" class="btn float-right login_btn">
-                    <div class="text-center">
-                        <!-- Button HTML (to Trigger Modal) -->
-                        <a href="#registrado.jsp" class="trigger-btn" data-toggle="modal"></a>
-                    </div>
+                                            <li class="dropdown">
+                                                <input type="submit" name="accion" target="_blank" class="btn btn-light action-button" value="Estado">
+                                            </li>
+                                            <a class="btn btn-light action-button" role="button" href="referenciales.jsp">Atrás</a>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </form>
-        </div>    
-        <form class="form-horizontal">            
-            <fieldset>
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="textinput">Descripción</label>  
-                    <div class="col-md-4">
-                        <input id="textinput" name="textinputclave" type="text"  class="form-control input-md">
-                        <span class="help-block">Ingrese nombre del país</span>  
-                    </div>
-                </div>
-                <!-- Button -->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="singlebutton">Nuevo</label>
-                    <div class="col-md-4">
-                        <button id="singlebutton" name="singlebutton" class="btn btn-success"><i class="fa fa-folder"></i></button>
-                    </div>
-                </div>
-
-                <!-- Button -->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="singlebutton">Editar</label>
-                    <div class="col-md-4">
-                        <button id="singlebutton" name="singlebutton" class="btn btn-primary"><i class="fa fa-edit"></i></button>
-                    </div>
-                </div>
-
-                <!-- Button -->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="singlebutton">Guardar</label>
-                    <div class="col-md-4">
-                        <button id="singlebutton" name="accion" value="Guardar" class="btn btn-primary"><i class="fa fa-save"></i></button>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="singlebutton">Buscar</label>
-                    <div class="col-md-4">
-                        <button id="singlebutton" name="singlebutton" class="btn btn-primary"><i class="fa fa-search"></i></button>
-                    </div>
-                </div>
-                <br><br>
-
-
-                <!-- Button -->
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="singlebutton">Borrar</label>
-                    <div class="col-md-4">
-                        <button id="singlebutton" name="singlebutton" class="btn btn-danger"><i class="fa fa-trash"></i></button>
-                    </div>
-                </div>
-                <br>
-            </fieldset>
+            </section>
+        </main>
     </body>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </html>

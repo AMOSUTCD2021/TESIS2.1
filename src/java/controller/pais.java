@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.Pais;
-import model.PaisBD;
 
 /**
  *
@@ -22,7 +21,7 @@ import model.PaisBD;
 public class pais extends HttpServlet {
 
     Pais p = new Pais();
-    PaisBD pbd = new PaisBD();
+    Pais pbd = new Pais();
     int r;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -42,7 +41,7 @@ public class pais extends HttpServlet {
                 if (r == 0) {
                     request.getRequestDispatcher("registradoReferenciales.jsp").forward(request, response);
                 } else {
-                    request.getRequestDispatcher("error.jsp").forward(request, response);
+                    request.getRequestDispatcher("errorGeneral.jsp").forward(request, response);
                 }
             }
         }

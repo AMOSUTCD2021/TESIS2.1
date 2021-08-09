@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="model.Ciudad"%>
+<%@page import="java.util.HashMap"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -186,15 +188,27 @@
                         <div class="card-details">
                             <h3 class="title">Detalles del Barrio</h3>
                             <div class="row">
+                                <div class="form-group col-sm-7">
+                                    <label for="card-holder">Buscar</label>
+                                    <input id="card-holder" type="text" name="buscartxt" class="form-control" aria-label="Card Holder" aria-describedby="basic-addon1">
+                                </div>
                                 <%-- Campo para completar--%>
                                 <div class="form-group col-sm-7">
                                     <label for="card-holder">Descripción</label>
                                     <input id="card-holder" type="text" name="descriptxt" class="form-control" placeholder="Ej: Santísima Trinidad" aria-label="Card Holder" aria-describedby="basic-addon1">
                                 </div>
-                                <%--BUSCADOR DE PAIS--%>
+                                <%--BUSCADOR DE LA CIUDAD--%>
                                 <div class="form-group col-sm-7">
                                     <label for="card-holder">Ciudad</label>
-                                    <div class="form-group"><input class="form-control search-field" placeholder="Ej: Asunción" type="search" name="search" id="search-field"></div>
+                                    <select id="drop_ciu" name="drop_ciu" class="form-control">
+                                        <%
+                                            Ciudad ciudad = new Ciudad();
+                                            HashMap<String, String> drop = ciudad.seleccionarCiudad();
+                                            for (String i : drop.keySet()) {
+                                                out.println("<option value='" + i + "'>" + drop.get(i) + "</option>");
+                                            }
+                                        %>
+                                    </select>
                                 </div>
                                 <%--Botones--%>
                                 <div>
@@ -210,7 +224,7 @@
                                             <li class="dropdown">
                                                 <input type="submit" name="accion" target="_blank" class="btn btn-light action-button" value="Estado">
                                             </li>
-                                            <a class="btn btn-light action-button" role="button" href="referenciales.jsp">Salir</a>
+                                            <a class="btn btn-light action-button" role="button" href="referenciales.jsp">Atrás</a>
                                         </ul>
                                     </nav>
                                 </div>
@@ -218,15 +232,6 @@
                                 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
                             </div>
                         </div>
-                    </form>
-                    <%--BUSCADOR DE PAIS PRUEBA--%>
-                    <form action="pais" method="POST">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Seleccione el país</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
                     </form>
                 </div>
             </section>

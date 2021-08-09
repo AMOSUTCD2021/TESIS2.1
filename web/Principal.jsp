@@ -140,71 +140,6 @@
 
     </head>
     <body>
-
-
-        <%@ page import="controller.muestraPagos" %>
-        <%--
-        <nav class="navbar navbar-dark bg-dark">         
-            <%-- <a style="color: white" class="navbar-toggler"><span class="navbar-toggler-icon"></span> PAGOS DE CUOTAS WEB </a> 
-
-
-            <form action="referenciales.jsp" method="POST">
-                <div class="container-fluid  margin">
-                    <input type="submit" target="_blank" class="btn btn-lg btn-danger" value="Archivos Referenciales">
-                </div>
-
-            </form>
-
-            <form action="usuarios.jsp" method="POST">
-                <div class="container-fluid  margin">
-                    <input type="submit" target="_blank" class="btn btn-lg btn-danger" value="Usuarios">
-                </div>
-
-            </form>
-
-            <form action="consultaPrest.jsp" method="POST">
-                <div class="container-fluid  margin">
-                    <input type="submit" target="_blank" class="btn btn-lg btn-danger" value="Ventas">
-                </div>
-
-            </form>
-            <form action="verTodos" method="POST">
-                <div class="container-fluid  margin">
-                    <input type="submit" target="_blank" class="btn btn-lg btn-danger" value="Cobranzas">
-                </div>
-            </form>
-
-            <form action="verTodos" method="POST">
-                <div class="container-fluid  margin">
-                    <input type="submit" target="_blank" class="btn btn-lg btn-danger" value="Servicios">
-                </div>
-            </form>
-
-            <form action="verTodos" method="POST">
-                <div class="container-fluid  margin">
-                    <input type="submit" target="_blank" class="btn btn-lg btn-danger" value="Compras">
-                </div>
-            </form>
-
-            <form action="verTodos" method="POST">
-                <div class="container-fluid  margin">
-                    <input type="submit" target="_blank" class="btn btn-lg btn-danger" value="Importaciones">
-                </div>
-            </form>
-            <form action="muestraPagos" method="POST">
-
-                <div class="container-fluid margin">
-                    <input type="submit" target="_blank" class="btn btn-lg btn-danger" value="Informes">
-                </div>
-            </form>
-            <form action="Controlador?accion=Salir" method="POST">
-                <div class="container-fluid margin">
-                    <input type="submit" target="_blank" class="btn btn-lg btn-danger" value="Salir">
-                </div>
-
-            </form>
-        </nav>
---%>
         <%--PRUEBA DE MENU --%>
         <div>
             <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
@@ -219,19 +154,14 @@
                             <input type="submit" target="_blank" class="btn btn-light action-button" value="Usuarios">
                         </li>
                     </form>
-                    <form action="ventas.jsp" method="POST">
-                        <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Ventas">
-                        </li>
-                    </form>
-                    <form action="cobros.jsp" method="POST">
-                        <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Cobranzas">
-                        </li>
-                    </form>
                     <form action="servicio.jsp" method="POST">
                         <li class="dropdown">
                             <input type="submit" target="_blank" class="btn btn-light action-button" value="Servicios">
+                        </li>
+                    </form>
+                    <form action="importacion.jsp" method="POST">
+                        <li class="dropdown">
+                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Importaciones">
                         </li>
                     </form>
                     <form action="compras.jsp" method="POST">
@@ -239,9 +169,14 @@
                             <input type="submit" target="_blank" class="btn btn-light action-button" value="Compras">
                         </li>
                     </form>
-                    <form action="importacion.jsp" method="POST">
+                    <form action="ventas.jsp" method="POST">
                         <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Importaciones">
+                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Ventas">
+                        </li>
+                    </form>
+                    <form action="cobros_pagos.jsp" method="POST">
+                        <li class="dropdown">
+                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Cobranzas y Pagos">
                         </li>
                     </form>
                     <form action="informes.jsp" method="POST">

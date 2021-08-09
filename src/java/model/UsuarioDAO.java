@@ -41,6 +41,7 @@ public class UsuarioDAO implements Validar {
             if (r == 1) {
                 return 1;
             } else {
+                System.out.println("No se encontro el registro");
                 return 0;
             }
 

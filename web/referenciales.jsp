@@ -159,104 +159,13 @@
         <link rel="stylesheet" href="css/estilos.css">
     </head>
     <body>
-        <%--
-        <h3>Alta, baja, modificación de datos referenciales</h3>
-
-        <nav class="navbar navbar-dark bg-clear"> 
-
-
-
-
-            <form action="funcionario.jsp" method="POST">                
-                <!--    <input type="submit" target="_blank" class="btn btn-lg btn-info" value="Funcionario"><span class="glyphicon glyphicon-briefcase"></span>  -->  
-                <button type="submit" enabled class="btn btn-lg btn-info" value="Funcionario"><i class="fa fa-briefcase"></i>Funcionario</button>
-            </form>
-
-
-            <form action="barrio.jsp" method="POST">  
-
-                <!--    <input type="submit" target="_blank" class="btn btn-lg btn-success" value="Barrio" >  <span class="glyphicon glyphicon-road"></span>   -->
-                <button type="submit" enabled class="btn btn-lg btn-success"value="Barrio"><i class="fa fa-road"></i>Barrio</button>
-            </form>
-
-
-            <form action="ciudad.jsp" method="POST">                
-                <!--    <input type="submit" target="_blank" class="btn btn-lg btn-success" value="Ciudad"> <span class="glyphicon glyphicon-home"></span>    -->
-                <button type="submit" enabled class="btn btn-lg btn-success"value="Ciudad"><i class="fa fa-home"></i>Ciudad</button>
-            </form>
-
-            <form action="departamento.jsp" method="POST">                
-                <!--    <input type="submit" target="_blank" class="btn btn-lg btn-success" value="Ciudad"> <span class="glyphicon glyphicon-home"></span>    -->
-                <button type="submit" enabled class="btn btn-lg btn-success"value="departamento"><i class="fa fa-map"></i>Departemento</button>
-            </form>
-
-            <form action="paisF.jsp" method="POST">                
-                <!--    <input type="submit" target="_blank" class="btn btn-lg btn-success" value="Pais"> <span class="glyphicon glyphicon-globe"></span>      --> 
-                <button type="submit" enabled class="btn btn-lg btn-success"value="Pais"><i class="fa fa-globe"></i>Pais</button>
-            </form>
-
-
-            <form action="cliente.jsp" method="POST">                
-                <!--   <input type="submit" target="_blank" class="btn btn-lg btn-warning" value="Cliente"> <span class="glyphicon glyphicon-lock"></span>    -->  
-                <button type="submit" enabled class="btn btn-lg btn-warning"value="Cliente"><i class="fa fa-lock"></i>Cliente</button>
-            </form>
-
-
-            <form action="proveedor.jsp" method="POST">                
-                <!--    <input type="submit" target="_blank" class="btn btn-lg btn-warning" value="Proveedor"> <span class="glyphicon glyphicon-plane"></span>   -->
-                <button type="submit" enabled class="btn btn-lg btn-warning"value="Proveedor"><i class="fa fa-plane"></i>Proveedor</button>
-            </form>
-
-
-            <form action="moneda.jsp" method="POST">                
-                <!--    <input type="submit" target="_blank" class="btn btn-lg btn-danger" value="Moneda"> <span class="glyphicon glyphicon-euro"></span>       --> 
-                <button type="submit" enabled class="btn btn-lg btn-danger"value="Moneda"><i class="fa fa-dollar"></i>Moneda</button>
-            </form>
-
-
-            <form action="tipo_de_pago.jsp" method="POST">                
-                <!--   <input type="submit" target="_blank" class="btn btn-lg btn-danger" value="Tipo de pago"> <span class="glyphicon glyphicon-star-empty"></span>   --> 
-                <button type="submit" enabled class="btn btn-lg btn-danger"value="Tipo de pago"><i class="fa fa-euro"></i>Tipo de pago</button>
-            </form>
-
-
-            <form action="tipo_de_servicio.jsp" method="POST">                
-                <!--    <input type="submit" target="_blank" class="btn btn-lg btn-primary" value="Tipo de servicio técnico"> <span class="glyphicon glyphicon-wrench"></span>    --> 
-                <button type="submit" enabled class="btn btn-lg btn-primary"value="Servicio tecnico"><i class="fa fa-wrench"></i>Tipo de Servicio Técnico</button>
-            </form>
-
-            <form action="contratos.jsp" method="POST">                
-                <!--    <input type="submit" target="_blank" class="btn btn-lg btn-primary" value="Tipo de servicio técnico"> <span class="glyphicon glyphicon-wrench"></span>    --> 
-                <button type="submit" enabled class="btn btn-lg btn-primary"value="contratos"><i class="fa fa-book"></i>Contratos</button>
-            </form>
-
-            <br>
-
-            <form action="Principal.jsp" method="POST">
-                <!--   <input type="submit" target="_blank" class="btn btn-lg btn-warning" value="Salir"><span class="glyphicon glyphicon-remove-circle"></span> -->
-                <button type="submit" enabled class="btn btn-lg btn-warning"value="Salir"><i class="fa fa-undo"></i>Salir</button>
-            </form>
-
-
-        </nav>
-        --%>
         <%-- NUEVO MENÚ--%>
         <div>
             <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
                 <ul class="nav navbar-nav">
-                    <form action="funcionario.jsp" method="POST">
+                    <form action="pais.jsp" method="POST">
                         <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Funcionario">
-                        </li>
-                    </form>
-                    <form action="barrio.jsp" method="POST">
-                        <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Barrio">
-                        </li>
-                    </form>
-                    <form action="ciudad.jsp" method="POST">
-                        <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Ciudad">
+                            <input type="submit" target="_blank" class="btn btn-light action-button" value="País">
                         </li>
                     </form>
                     <form action="departamento.jsp" method="POST">
@@ -264,14 +173,19 @@
                             <input type="submit" target="_blank" class="btn btn-light action-button" value="Departamento">
                         </li>
                     </form>
-                    <form action="paisF.jsp" method="POST">
+                    <form action="ciudad.jsp" method="POST">
                         <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="País">
+                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Ciudad">
                         </li>
                     </form>
-                    <form action="cliente.jsp" method="POST">
+                    <form action="barrio.jsp" method="POST">
                         <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Cliente">
+                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Barrio">
+                        </li>
+                    </form>
+                    <form action="funcionario.jsp" method="POST">
+                        <li class="dropdown">
+                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Funcionario">
                         </li>
                     </form>
                     <form action="proveedor.jsp" method="POST">
@@ -279,9 +193,9 @@
                             <input type="submit" target="_blank" class="btn btn-light action-button" value="Proveedor">
                         </li>
                     </form>
-                    <form action="moneda.jsp" method="POST">
+                    <form action="cliente.jsp" method="POST">
                         <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Moneda">
+                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Cliente">
                         </li>
                     </form>
                     <form action="tipo_de_pago.jsp" method="POST">
@@ -289,25 +203,34 @@
                             <input type="submit" target="_blank" class="btn btn-light action-button" value="Tipo de Pago">
                         </li>
                     </form>
-                    <form action="contratos.jsp" method="POST">
-                        <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Contrato">
-                        </li>
-                    </form>
                     <form action="forma_cobro.jsp" method="POST">
                         <li class="dropdown">
                             <input type="submit" target="_blank" class="btn btn-light action-button" value="Forma de Cobro">
                         </li>
                     </form>
-                    <form action="timbrado.jsp" method="POST">
+                    <form action="caja.jsp" method="POST">
                         <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Timbrado">
+                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Caja">
+                        </li>
+                    </form>
+                    <form action="tipo_servicio.jsp" method="POST">
+                        <li class="dropdown">
+                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Tipo de Servicio">
+                        </li>
+                    </form>
+                    <form action="moneda.jsp" method="POST">
+                        <li class="dropdown">
+                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Moneda">
+                        </li>
+                    </form>
+                    <form action="impuesto.jsp" method="POST">
+                        <li class="dropdown">
+                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Impuesto">
                         </li>
                     </form>
                 </ul>
                 <%--TABULACIÓN--%>
                 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>

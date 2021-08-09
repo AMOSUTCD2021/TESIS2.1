@@ -1,17 +1,18 @@
 <%-- 
-    Document   : mensaje
-    Created on : 04/08/2021, 02:40:46 PM
-    Author     : Alvaro
+    Document   : errorGeneral
+    Created on : 09/08/2021, 01:41:35 PM
+    Author     : Francisca Gómez
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<head>
+<html>
+    <head>
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Datos Vacios</title>
+        <title>Error</title>
         <STYLE TYPE="text/css" MEDIA=screen>
             <!-- 
             body{
@@ -143,24 +144,24 @@
             }
             --></style>
     </head>
+    <body>
 
-<body>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
 
         <div class="container error-container">
             <div class="row  d-flex align-items-center justify-content-center">
                 <div class="col-md-12 text-center">
                     <h1 class="big-text">Oops!</h1>
-                    <h2 class="small-text">VUELVA A INTENTARLO</h2>
+                    <h2 class="small-text">Ha ocurrido algo inesperado</h2>
 
                 </div>
                 <div class="col-md-6  text-center">
-                    <p>Estos datos son requeridos, no pueden quedar en blanco</p>
-                    
+                    <p>Vuelva a intentar o contacte a un administrador.</p>
+                    <p>Intentos fallidos......<strong> ${contadorfallos}</strong></p>
 
 
                     
-                    <h2 class="small-text">Por favor</h2>
+                    <h2 class="small-text">O</h2>
 
                     <a href="referenciales.jsp" class="button button-dark-blue iq-mt-15 text-center">INTENTAR DE NUEVO</a>
 
@@ -171,5 +172,10 @@
 
         </div>
 
-</body>
+        <h1>Vuelve a intentar!</h1>
+        
+        <div class="container mt-4">
+            <h1>Intentos fallidos......<strong> ${contadorfallos}</strong>  </h1>
+        </div>
+    </body>
 </html>

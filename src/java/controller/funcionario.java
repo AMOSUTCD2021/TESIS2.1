@@ -11,36 +11,56 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.Barrio;
+import model.Funcionario;
 
 /**
  *
  * @author Francisca Gómez
  */
-@WebServlet(name = "barrio", urlPatterns = {"/barrio"})
-public class barrio extends HttpServlet {
-    
-    Barrio b = new Barrio();
-    Barrio bbd = new Barrio();
+@WebServlet(name = "funcionario", urlPatterns = {"/funcionario"})
+public class funcionario extends HttpServlet {
+
+    Funcionario f = new Funcionario();
+    Funcionario fbd = new Funcionario();
     int r;
-    
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-         String accion = request.getParameter("accion");
+        String accion = request.getParameter("accion");
         if (accion.equals("Guardar")) {            
-            String descrip = request.getParameter("descriptxt");
-            String buscar = request.getParameter("search");
-            int ciudad = Integer.valueOf(request.getParameter("drop_ciu"));
-            int length = descrip.length();
-            if (length == 0) {
+            String nom = request.getParameter("nombretxt");
+            String ape = request.getParameter("apellidotxt");
+            String ci = request.getParameter("citxt");
+            String cargo = request.getParameter("cargotxt");
+            String email = request.getParameter("emailtxt");
+            String tel = request.getParameter("teltxt");
+            String dir = request.getParameter("dirtxt");
+            String estado = request.getParameter("customRadio");
+            String usu = request.getParameter("txtusuario");
+            int barrio = Integer.valueOf(request.getParameter("drop_bar"));
+            int length = nom.length();
+            int length2 = ape.length();
+            int length3 = ci.length();
+            int length4 = cargo.length();
+            int length5 = email.length();
+            int length6 = tel.length();
+            int length7 = dir.length();
+            if (length == 0||length2 == 0||length3 == 0||length4 == 0||length5 == 0||length6 == 0||length7 == 0) {
                 request.getRequestDispatcher("mensaje.jsp").forward(request, response);
             } else {
-                b.setDescripcion_barrio(descrip);
-                b.setDescripcion_barrio(buscar);
-                b.setId_ciudad(ciudad);
-                r = bbd.registrarBarrio(b);
-                if (r == 0) {
+                f.setNom_fun(nom);
+                f.setApe_fun(ape);
+                f.setCi_fun(ci);
+                f.setCargo_fun(cargo);
+                f.setEmail_fun(email);
+                f.setTel_fun(tel);
+                f.setDir_fun(dir);
+                f.setEstado_fun(estado);
+                f.setNom_usu_mod(usu);
+                f.setId_barrio(barrio);
+                r = fbd.registrarFuncionario(f);
+                if (r == 1) {
                     request.getRequestDispatcher("registradoReferenciales.jsp").forward(request, response);
                 } else {
                     request.getRequestDispatcher("errorGeneral.jsp").forward(request, response);
