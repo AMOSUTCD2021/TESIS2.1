@@ -19,16 +19,16 @@ import model.Barrio;
  */
 @WebServlet(name = "barrio", urlPatterns = {"/barrio"})
 public class barrio extends HttpServlet {
-    
+
     Barrio b = new Barrio();
     Barrio bbd = new Barrio();
     int r;
-    
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-         String accion = request.getParameter("accion");
-        if (accion.equals("Guardar")) {            
+        String accion = request.getParameter("accion");
+        if (accion.equals("Guardar")) {
             String descrip = request.getParameter("descriptxt");
             int ciudad = Integer.valueOf(request.getParameter("drop_ciu"));
             int length = descrip.length();
@@ -45,20 +45,26 @@ public class barrio extends HttpServlet {
                 }
             }
         }
-        if (accion.equals("Buscar")) {            
+        
+        if (accion.equals("Buscar")) {
             String buscar = request.getParameter("buscartxt");
             int length = buscar.length();
-            if (length == 0) {
-                request.getRequestDispatcher("mensaje.jsp").forward(request, response);
-            } else {
-                b.setDescripcion_barrio(buscar);
-                r = bbd.registrarBarrio(b);
-                if (r == 0) {
-                    request.getRequestDispatcher("registradoReferenciales.jsp").forward(request, response);
-                } else {
-                    request.getRequestDispatcher("errorGeneral.jsp").forward(request, response);
-                }
-            }
+
+            b = b.buscarBarrio(buscar);
+            request.setAttribute("Barrio", b);
+            request.getRequestDispatcher("barrio.jsp").forward(request, response);
+                                  
+
+        }
+        if (accion.equals("Barrio")) {
+            String buscar = request.getParameter("buscartxt");
+            int length = buscar.length();
+
+            b = b.buscarBarrio(buscar);
+            request.setAttribute("Barrio", b);
+            request.getRequestDispatcher("barrio.jsp").forward(request, response);
+                                  
+
         }
     }
 

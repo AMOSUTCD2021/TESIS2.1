@@ -180,12 +180,14 @@
                         </li>
                     </form>
                     <form action="barrio" method="POST">
-                        <input type="hidden" name="buscartxt" value=" ">
+                    <%--    <input id="card-holder" type="hidden" name="buscartxt" class="form-control" aria-label="Card Holder" aria-describedby="basic-addon1" value=" ">--%>
+                         <input type="hidden" name="buscartxt" value=" "> 
                         <li class="dropdown">
-                            <input type="submit" name="accion" target="_blank" class="btn btn-light action-button" value="Buscar">
-                            
-                        </li>
+                            <input type="submit" name="accion" target="_blank" class="btn btn-light action-button" value="Barrio">
+
+                        </li>                    
                     </form>
+
                     <form action="funcionario.jsp" method="POST">
                         <li class="dropdown">
                             <input type="submit" target="_blank" class="btn btn-light action-button" value="Funcionario">
@@ -237,7 +239,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                <%--TABULACIÓN--%>
+                    <%--TABULACIÓN--%>
                 <a class="btn btn-light action-button" role="button" href="Principal.jsp">Atrás</a>
             </nav>
         </div>
