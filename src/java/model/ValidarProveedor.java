@@ -7,15 +7,8 @@ package model;
 
 /**
  *
- * @author Alvaro
+ * @author Francisca Gómez
  */
-public class Variables {
-    
-    public static int id;
-    public static int contadorfallos = 0;
-    public static String usuario;
-    
-    
-    
-    
+public interface ValidarProveedor {
+    public int registrarProveedor(Proveedor prov); 
 }

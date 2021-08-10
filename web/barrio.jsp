@@ -177,6 +177,7 @@
         }
     </style>
     <body>
+
         <main class="page payment-page">
             <section class="payment-form dark">
                 <div class="container">
@@ -191,6 +192,9 @@
                                 <div class="form-group col-sm-7">
                                     <label for="card-holder">Buscar</label>
                                     <input id="card-holder" type="text" name="buscartxt" class="form-control" aria-label="Card Holder" aria-describedby="basic-addon1">
+                                    <li class="dropdown">
+                                        <input type="submit" name="accion" target="_blank" class="btn btn-light action-button" value="Buscar">
+                                    </li>
                                 </div>
                                 <%-- Campo para completar--%>
                                 <div class="form-group col-sm-7">

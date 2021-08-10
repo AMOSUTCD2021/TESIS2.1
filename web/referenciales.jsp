@@ -159,6 +159,7 @@
         <link rel="stylesheet" href="css/estilos.css">
     </head>
     <body>
+        <%@page import="controller.barrio"%>
         <%-- NUEVO MENÚ--%>
         <div>
             <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
@@ -178,9 +179,11 @@
                             <input type="submit" target="_blank" class="btn btn-light action-button" value="Ciudad">
                         </li>
                     </form>
-                    <form action="barrio.jsp" method="POST">
+                    <form action="barrio" method="POST">
+                        <input type="hidden" name="buscartxt" value=" ">
                         <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Barrio">
+                            <input type="submit" name="accion" target="_blank" class="btn btn-light action-button" value="Buscar">
+                            
                         </li>
                     </form>
                     <form action="funcionario.jsp" method="POST">

@@ -30,15 +30,28 @@ public class barrio extends HttpServlet {
          String accion = request.getParameter("accion");
         if (accion.equals("Guardar")) {            
             String descrip = request.getParameter("descriptxt");
-            String buscar = request.getParameter("search");
             int ciudad = Integer.valueOf(request.getParameter("drop_ciu"));
             int length = descrip.length();
             if (length == 0) {
                 request.getRequestDispatcher("mensaje.jsp").forward(request, response);
             } else {
                 b.setDescripcion_barrio(descrip);
-                b.setDescripcion_barrio(buscar);
                 b.setId_ciudad(ciudad);
+                r = bbd.registrarBarrio(b);
+                if (r == 0) {
+                    request.getRequestDispatcher("registradoReferenciales.jsp").forward(request, response);
+                } else {
+                    request.getRequestDispatcher("errorGeneral.jsp").forward(request, response);
+                }
+            }
+        }
+        if (accion.equals("Buscar")) {            
+            String buscar = request.getParameter("buscartxt");
+            int length = buscar.length();
+            if (length == 0) {
+                request.getRequestDispatcher("mensaje.jsp").forward(request, response);
+            } else {
+                b.setDescripcion_barrio(buscar);
                 r = bbd.registrarBarrio(b);
                 if (r == 0) {
                     request.getRequestDispatcher("registradoReferenciales.jsp").forward(request, response);

@@ -37,7 +37,7 @@ public class funcionario extends HttpServlet {
             String tel = request.getParameter("teltxt");
             String dir = request.getParameter("dirtxt");
             String estado = request.getParameter("customRadio");
-            String usu = request.getParameter("txtusuario");
+            String usu = request.getParameter("usuario");
             int barrio = Integer.valueOf(request.getParameter("drop_bar"));
             int length = nom.length();
             int length2 = ape.length();
@@ -60,7 +60,7 @@ public class funcionario extends HttpServlet {
                 f.setNom_usu_mod(usu);
                 f.setId_barrio(barrio);
                 r = fbd.registrarFuncionario(f);
-                if (r == 1) {
+                if (r == 0) {
                     request.getRequestDispatcher("registradoReferenciales.jsp").forward(request, response);
                 } else {
                     request.getRequestDispatcher("errorGeneral.jsp").forward(request, response);

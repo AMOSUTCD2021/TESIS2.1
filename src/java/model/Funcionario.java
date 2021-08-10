@@ -137,7 +137,7 @@ public class Funcionario implements ValidarFuncionario {
         int r = 0;
         String sql = "INSERT INTO public.funcionario(\n"
                 + "	nombre_funcionario, apellido_funcionario, cedula_funcionario, cargo_funcionario, email_funcionario, telefono_funcionario, direccion_funcionario, estado_funcionario, nombre_usuario_modificacion, fecha_modificacion, id_barrio)\n"
-                + "	VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'admin', (SELECT current_date), ?);";
+                + "	VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, (SELECT current_date), ?);";
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
@@ -150,7 +150,7 @@ public class Funcionario implements ValidarFuncionario {
             ps.setString(7, f.getDir_fun());
             ps.setString(8, f.getEstado_fun());
             ps.setString(9, f.getNom_usu_mod());
-            ps.setInt(9, f.getId_barrio());
+            ps.setInt(10, f.getId_barrio());
             rs = ps.executeQuery();
             while (rs.next()) {
                 r = r + 1;
