@@ -62,8 +62,8 @@ public class Ciudad {
 
     public int registrarCiudad(Ciudad c) {
         int r = 0;
-        String sql = "INSERT INTO public.ciudad(descripcion_ciudad)\n"
-                + "	VALUES (?)";
+        String sql = "INSERT INTO public.ciudad(descripcion_ciudad, id_departamento)\n"
+                + "	VALUES (?,?)";
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
@@ -73,6 +73,7 @@ public class Ciudad {
                 r = r + 1;
                 Variables.id = Integer.parseInt(rs.getString("id_usuario"));
                 c.setDescripcion_ciudad(rs.getString("descripcion_ciudad"));
+                c.setId_depar(rs.getInt("id_departamento"));
             }
             if (r == 1) {
                 return 1;

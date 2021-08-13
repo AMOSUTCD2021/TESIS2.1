@@ -159,78 +159,99 @@
         <link rel="stylesheet" href="css/estilos.css">
     </head>
     <body>
+        <%@page import="controller.pais"%>
+        <%@page import="controller.departamento"%>
+        <%@page import="controller.ciudad"%>
         <%@page import="controller.barrio"%>
+        <%@page import="controller.funcionario"%>
+        <%@page import="controller.proveedor"%>
+        <%@page import="controller.cliente"%>
+        <%@page import="controller.tipo_pago"%>
+        <%@page import="controller.forma_cobro"%>
+        <%@page import="controller.caja"%>
+        <%@page import="controller.tipo_servicio"%>
+        <%@page import="controller.moneda"%>
+        <%@page import="controller.impuesto"%>
         <%-- NUEVO MENÚ--%>
         <div>
             <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
                 <ul class="nav navbar-nav">
                     <form action="pais.jsp" method="POST">
+                        <input type="hidden" name="buscartxt" value=" "> 
                         <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="País">
+                            <input type="submit" name="accion" target="_blank" class="btn btn-light action-button" value="Pais">
                         </li>
                     </form>
                     <form action="departamento.jsp" method="POST">
+                        <input type="hidden" name="buscartxt" value=" "> 
                         <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Departamento">
+                            <input type="submit" name="accion" target="_blank" class="btn btn-light action-button" value="Departamento">
                         </li>
                     </form>
                     <form action="ciudad.jsp" method="POST">
+                        <input type="hidden" name="buscartxt" value=" "> 
                         <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Ciudad">
+                            <input type="submit" name="accion" target="_blank" class="btn btn-light action-button" value="Ciudad">
                         </li>
                     </form>
                     <form action="barrio" method="POST">
-                    <%--    <input id="card-holder" type="hidden" name="buscartxt" class="form-control" aria-label="Card Holder" aria-describedby="basic-addon1" value=" ">--%>
-                         <input type="hidden" name="buscartxt" value=" "> 
+                        <input type="hidden" name="buscartxt" value=" "> 
                         <li class="dropdown">
                             <input type="submit" name="accion" target="_blank" class="btn btn-light action-button" value="Barrio">
-
-                        </li>                    
+                        </li>
                     </form>
-
                     <form action="funcionario.jsp" method="POST">
+                        <input type="hidden" name="buscartxt" value=" "> 
                         <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Funcionario">
+                            <input type="submit" name="accion" target="_blank" class="btn btn-light action-button" value="Funcionario">
                         </li>
                     </form>
                     <form action="proveedor.jsp" method="POST">
+                        <input type="hidden" name="buscartxt" value=""> 
                         <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Proveedor">
+                            <input type="submit" name="accion" target="_blank" class="btn btn-light action-button" value="Proveedor">
                         </li>
                     </form>
                     <form action="cliente.jsp" method="POST">
+                        <input type="hidden" name="buscartxt" value=" "> 
                         <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Cliente">
+                            <input type="submit" name="accion" target="_blank" class="btn btn-light action-button" value="Cliente">
                         </li>
                     </form>
-                    <form action="tipo_de_pago.jsp" method="POST">
+                    <form action="tipo_pago.jsp" method="POST">
+                        <input type="hidden" name="buscartxt" value=" "> 
                         <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Tipo de Pago">
+                            <input type="submit" name="accion" target="_blank" class="btn btn-light action-button" value="Tipo de Pago">
                         </li>
                     </form>
                     <form action="forma_cobro.jsp" method="POST">
+                        <input type="hidden" name="buscartxt" value=" "> 
                         <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Forma de Cobro">
+                            <input type="submit" name="accion" target="_blank" class="btn btn-light action-button" value="Forma de Cobro">
                         </li>
                     </form>
                     <form action="caja.jsp" method="POST">
+                        <input type="hidden" name="buscartxt" value=" "> 
                         <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Caja">
+                            <input type="submit" name="accion" target="_blank" class="btn btn-light action-button" value="Caja">
                         </li>
                     </form>
                     <form action="tipo_servicio.jsp" method="POST">
+                        <input type="hidden" name="buscartxt" value=" "> 
                         <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Tipo de Servicio">
+                            <input type="submit" name="accion" target="_blank" class="btn btn-light action-button" value="Tipo de Servicio">
                         </li>
                     </form>
                     <form action="moneda.jsp" method="POST">
+                        <input type="hidden" name="buscartxt" value=" "> 
                         <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Moneda">
+                            <input type="submit" name="accion" target="_blank" class="btn btn-light action-button" value="Moneda">
                         </li>
                     </form>
                     <form action="impuesto.jsp" method="POST">
+                        <input type="hidden" name="buscartxt" value=" "> 
                         <li class="dropdown">
-                            <input type="submit" target="_blank" class="btn btn-light action-button" value="Impuesto">
+                            <input type="submit" name="accion" target="_blank" class="btn btn-light action-button" value="Impuesto">
                         </li>
                     </form>
                 </ul>

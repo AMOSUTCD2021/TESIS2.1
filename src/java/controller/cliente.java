@@ -12,38 +12,37 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.Ciudad;
 
 /**
  *
  * @author Francisca Gómez
  */
-@WebServlet(name = "ciudad", urlPatterns = {"/ciudad"})
-public class ciudad extends HttpServlet {
+@WebServlet(name = "cliente", urlPatterns = {"/cliente"})
+public class cliente extends HttpServlet {
 
-    Ciudad c = new Ciudad();
-    Ciudad cbd = new Ciudad();
-    int r;
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String accion = request.getParameter("accion");
-        if (accion.equals("Guardar")) {            
-            String descrip = request.getParameter("descriptxt");
-            int depar = Integer.valueOf(request.getParameter("drop_dep"));
-            int length = descrip.length();
-            if (length == 0) {
-                request.getRequestDispatcher("mensaje.jsp").forward(request, response);
-            } else {
-                c.setDescripcion_ciudad(descrip);
-                c.setId_depar(depar);
-                r = cbd.registrarCiudad(c);
-                if (r == 0) {
-                    request.getRequestDispatcher("registradoReferenciales.jsp").forward(request, response);
-                } else {
-                    request.getRequestDispatcher("errorGeneral.jsp").forward(request, response);
-                }
-            }
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet cliente</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet cliente at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
         }
     }
 

@@ -159,7 +159,7 @@
 
     </head>
     <body>
-        <h1>Funcionarios</h1>
+        <h1>Proveedor</h1>
         <nav class="navbar navbar-dark bg-clear"> 
 
             <form action="referenciales.jsp" method="POST">
