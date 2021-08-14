@@ -30,12 +30,14 @@ public class ciudad extends HttpServlet {
         String accion = request.getParameter("accion");
         if (accion.equals("Guardar")) {            
             String descrip = request.getParameter("descriptxt");
+            String buscar = request.getParameter("search");
             int depar = Integer.valueOf(request.getParameter("drop_dep"));
             int length = descrip.length();
             if (length == 0) {
                 request.getRequestDispatcher("mensaje.jsp").forward(request, response);
             } else {
                 c.setDescripcion_ciudad(descrip);
+                c.setDescripcion_ciudad(buscar);
                 c.setId_depar(depar);
                 r = cbd.registrarCiudad(c);
                 if (r == 0) {

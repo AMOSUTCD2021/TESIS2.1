@@ -36,7 +36,8 @@ public class UsuarioDAO implements Validar {
                 
                 u.setNombre_usuario(rs.getString("nombre_usuario"));
                 u.setClave_usuario(rs.getString("clave_usuario"));
-                //u.setEstado(rs.getString("estado"));
+                //u.setEstado(rs.getString("estado")); capturar estado o su id y almacenar en variable publica para comparar y enviar al controlador a condicion IF antes de abrir el principal.jsp
+                // chequar http://es.uwenku.com/question/p-sfbqsryr-bp.html para habilitacion de botones de acuerdo al perfil.
             }
             if (r == 1) {
                 return 1;

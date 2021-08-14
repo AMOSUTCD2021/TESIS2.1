@@ -10,19 +10,16 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
-import javax.mail.MessagingException;
-import org.hibernate.validator.constraints.EAN;
 
 /**
  *
  * @author Francisca Gómez
  */
-public class Barrio implements ValidarBarrio {
+public class Barrio implements ValidarBarrio{
 
     //CONSTRUCTORES - SET - GET
     int id_barrio, id_ciudad;
     String descripcion_barrio;
-    String descripcion_ciudad;
 
     public Barrio() {
     }
@@ -51,12 +48,10 @@ public class Barrio implements ValidarBarrio {
         this.descripcion_barrio = descripcion_barrio;
     }
 
-    public String getDescripcion_ciudad() {
-        return descripcion_ciudad;
-    }
-
-    public void setDescripcion_ciudad(String descripcion_ciudad) {
-        this.descripcion_ciudad = descripcion_ciudad;
+    public Barrio(int id_barrio, int id_ciudad, String descripcion_barrio) {
+        this.id_barrio = id_barrio;
+        this.id_ciudad = id_ciudad;
+        this.descripcion_barrio = descripcion_barrio;
     }
 
     //FUNCIONES REGISTRAR - BUSCAR - MODIFICAR - CAMBIAR ESTADO
@@ -110,10 +105,9 @@ public class Barrio implements ValidarBarrio {
         }
         return drop_bar;
     }
-
-    public Barrio buscarBarrio(String buscartxt) {
+    
+    public int buscarBarrio(Barrio b) {
         int r = 0;
-        Barrio b = new Barrio();
         String sql = "SELECT bar.descripcion_barrio, ciu.descripcion_ciudad\n"
                 + "	FROM ciudad ciu\n"
                 + "	INNER JOIN barrio bar\n"
@@ -122,23 +116,20 @@ public class Barrio implements ValidarBarrio {
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
-            ps.setString(1, buscartxt);
-
+            ps.setString(1, b.getDescripcion_barrio());
             rs = ps.executeQuery();
             while (rs.next()) {
                 r = r + 1;
                 b.setDescripcion_barrio(rs.getString("descripcion_barrio"));
-                b.setDescripcion_ciudad(rs.getString("descripcion_ciudad"));
+            }
+            if (r == 1) {
+                return 1;
+            } else {
+                return 0;
             }
 
-            
-
         } catch (Exception e) {
-            System.out.println("hola");
-            
-
+            return 0;
         }
-        
-         finally {return b;}
     }
 }

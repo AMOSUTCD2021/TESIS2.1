@@ -39,6 +39,8 @@ public class Controlador extends HttpServlet {
             String contra = String.valueOf(request.getParameter("txtcontrasena"));
             int length = usuar.length();
             int length2 = contra.length();
+            Variables.usumod = String.valueOf(request.getParameter("txtusuario"));
+            
 
             if (length == 0 || length2 == 0 ) {
 

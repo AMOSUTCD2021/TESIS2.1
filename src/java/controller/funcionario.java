@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.Funcionario;
+import model.Variables;
 
 /**
  *
@@ -37,7 +38,7 @@ public class funcionario extends HttpServlet {
             String tel = request.getParameter("teltxt");
             String dir = request.getParameter("dirtxt");
             String estado = request.getParameter("customRadio");
-            String usu = request.getParameter("usuario");
+            String usu = Variables.usumod;
             int barrio = Integer.valueOf(request.getParameter("drop_bar"));
             int length = nom.length();
             int length2 = ape.length();
@@ -46,6 +47,7 @@ public class funcionario extends HttpServlet {
             int length5 = email.length();
             int length6 = tel.length();
             int length7 = dir.length();
+            
             if (length == 0||length2 == 0||length3 == 0||length4 == 0||length5 == 0||length6 == 0||length7 == 0) {
                 request.getRequestDispatcher("mensaje.jsp").forward(request, response);
             } else {

@@ -13,7 +13,7 @@ public class Variables {
     
     public static int id;
     public static int contadorfallos = 0;
-    public static String usuario;
+    public  static String usumod;
     
     
     
